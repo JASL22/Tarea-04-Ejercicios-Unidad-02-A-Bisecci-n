@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # --------------------------
-# Parte 1: Graficar y = x y y = sin(x)
+# Parte 1: Graficar y = x y y = sin(x) y guardar imagen
 # --------------------------
 
 x_vals = np.linspace(-2 * np.pi, 2 * np.pi, 500)
@@ -17,7 +17,12 @@ plt.axvline(0, color='black', linewidth=0.5)
 plt.legend()
 plt.title("Gráficas de y = x y y = sin(x)")
 plt.grid(True)
-plt.show()
+
+# Guardar la imagen
+plt.savefig("grafica_funciones.png", dpi=300)
+plt.close()  # Cierra la figura para evitar mostrarla si no es necesario
+
+print("✅ Gráfica guardada como 'grafica_funciones.png'")
 
 # --------------------------
 # Parte 2: Método de bisección para x = 2 sin(x)
@@ -41,8 +46,7 @@ def biseccion(a, b, tol=1e-5):
             a = c
     return c, iteraciones
 
-# Buscamos una raíz en un intervalo donde x = 2 sin(x)
-# Aproximadamente entre 1 y 2
+# Buscar raíz entre 1 y 2
 raiz, pasos = biseccion(1, 2)
 
 print("\nMétodo de bisección para x = 2 sin(x)")
