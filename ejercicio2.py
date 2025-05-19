@@ -22,7 +22,7 @@ plt.grid(True)
 plt.savefig("grafica_funciones.png", dpi=300)
 plt.close()  # Cierra la figura para evitar mostrarla si no es necesario
 
-print("✅ Gráfica guardada como 'grafica_funciones.png'")
+print(" Gráfica guardada como 'grafica_funciones.png'")
 
 # --------------------------
 # Parte 2: Método de bisección para x = 2 sin(x)
